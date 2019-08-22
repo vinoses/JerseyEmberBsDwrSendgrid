@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-<body>
+
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Bootstrap here DWR there</title>
@@ -26,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css"/>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 </head>
-
+<body>
 <header class="w-100 bg-secondary">
     <div class="container">
         <div class="row">
@@ -172,8 +173,6 @@
     </div>
 </header>
 
-<body>
-
 <form class="bg-info w-100">
     <div class="container">
         <h2 class="row justify-content-center">Jersey RESTful Web Application!</h2>
@@ -182,6 +181,16 @@
         for more information on Jersey!
     </p></div>
 </form>
+
+<div class="w-100 bg-success">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="row justify-content-start"><a href="emission/app/index.html">Ember Application</a>
+        </div>
+    </div>
+</div>
+</div>
 
 <div class="container">
     <div class="row" style="margin : 10%;">
