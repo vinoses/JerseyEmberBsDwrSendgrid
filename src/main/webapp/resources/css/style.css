@@ -1,0 +1,14 @@
+body {
+  background-color: #F7F7F7;
+}
+header{
+  display: inline-flex;
+}
+
+.offset1{
+  margin-left:1%;
+}
+.loadTime {
+  max-width: 100px;
+}
+

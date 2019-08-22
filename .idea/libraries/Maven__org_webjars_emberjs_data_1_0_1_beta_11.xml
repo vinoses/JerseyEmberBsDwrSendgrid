@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.webjars:emberjs-data:1.0.1-beta.11">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/emberjs-data/1.0.1-beta.11/emberjs-data-1.0.1-beta.11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/emberjs-data/1.0.1-beta.11/emberjs-data-1.0.1-beta.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/emberjs-data/1.0.1-beta.11/emberjs-data-1.0.1-beta.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

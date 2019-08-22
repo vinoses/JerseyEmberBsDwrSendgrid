@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JerseyEmberBsDwrSendgrid:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>JerseyEmberBsDwrSendgrid</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="JerseyEmberBsDwrSendgrid-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="JerseyEmberBsDwrSendgrid:war exploded" />
+    </root>
+  </artifact>
+</component>

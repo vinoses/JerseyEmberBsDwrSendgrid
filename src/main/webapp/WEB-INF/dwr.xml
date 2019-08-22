@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr//dwr30.dtd">
+<dwr>
+	<allow>
+
+		<!-- Create JavaDate.js	from Date.java -->
+		<create creator="new" javascript="JavaDate">
+			<param name="class" value="java.util.Date"/>
+		</create>
+
+		<!-- Create People.js from People.java		-->
+		<create creator="new" javascript="datahandler" scope="script">
+			<param name="class" value="com.github.vinoses.jerseyemberbsdwrsendgrid.DataHandler"/>
+		</create>
+		<!-- Convert Person.java for entity return		-->
+		<convert match="com.github.vinoses.jerseyemberbsdwrsendgrid.Data" converter="bean"/>
+
+	</allow>
+</dwr>
