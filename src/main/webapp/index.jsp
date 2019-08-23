@@ -186,7 +186,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <p class="row justify-content-start"><a href="emission/app/index.html">Ember Application</a>
+            <p class="row justify-content-start"><a href="emission/index.html">Ember Application</a>
         </div>
     </div>
 </div>
