@@ -2,195 +2,70 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Bootstrap here DWR there</title>
-<!-- JQuery -->
-<script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/jquery-3.4.1.js"></script>
-<!-- Bootstrap Scripts -->
-<script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/popper.js"></script>
-<script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/bootstrap.js"></script>
-<!-- DWR Scripts -->
-<script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/engine.js"></script>
-<!-- dwr created javascript from java -->
-<script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/datahandler.js"></script>
-<script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/JavaDate.js"></script>
-<!-- page specific behavior -->
-<script type='text/javascript' src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/index.js"></script>
-<!-- Css from Bootstrap - font-awesome - overrides in style -->
-<link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/html5-boilerplate.css" />
-<link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap-responsive.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/style.css" />
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css"/>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jersey Ember Bootstrap and DWR</title>
+    <!-- JQuery -->
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/jquery-3.4.1.js"></script>
+    <!-- Bootstrap Scripts -->
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/popper.js"></script>
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/bootstrap.js"></script>
+    <!-- DWR Scripts -->
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/engine.js"></script>
+    <!-- dwr created javascript from java -->
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/datahandler.js"></script>
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/JavaDate.js"></script>
+    <!-- page specific behavior -->
+    <script type='text/javascript' src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/index.js"></script>
+    <!-- Css from Bootstrap - font-awesome - overrides in style -->
+    <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/html5-boilerplate.css" />
+    <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/style.css" />
 </head>
 <body>
-<header class="w-100 bg-secondary">
+<header>
     <div class="container">
-        <div class="row">
-            <div class="btn col mx-2">DWR
-                <div class="loadTime">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light w-100">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <img src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png" class="img-fluid">
+
+                <div class="col ml-2 mr-5">
+                    DWR
+                    <div class="loadTime">
+                    </div>
                 </div>
-            </div>
-            <div class="col btn">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        Edit <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">Undo</a></li>
-                        <li><a tabindex="-1" href="#">Redo</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="test" tabindex="-1" href="#">Options <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Option 1</a></li>
-                                <li><a tabindex="-1" href="#">Option 2</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="test" href="#">Alternatives <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Option 3</a></li>
-                                        <li><a href="#">Option 4</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+
+                <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link alert-link" href="emission/index.html">Ember </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link alert-link" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap</a>
                         </li>
                     </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
-            </div>
-            <div class="col btn">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        View <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">Toolbar</a></li>
-                        <li><a tabindex="-1" href="#">Sidebar</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="test" tabindex="-1" href="#">Page Style <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Style 1</a></li>
-                                <li><a tabindex="-1" href="#">Style 2</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="test" href="#">Alternatives <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Style 3</a></li>
-                                        <li><a href="#">Style 4</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col btn">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        Navigate
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">Link 1</a></li>
-                        <li><a tabindex="-1" href="#">Link 2</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="test" tabindex="-1" href="#">More Links <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Link 3</a></li>
-                                <li><a tabindex="-1" href="#">Link 4</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="test" href="#">Another Links <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Link 5</a></li>
-                                        <li><a href="#">Link 6</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col btn">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        History
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">Show</a></li>
-                        <li><a tabindex="-1" href="#">Clear</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col btn">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        Bookmarks
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">Bookmark Current Page</a></li>
-                        <li><a tabindex="-1" href="#"></a></li>
-                        <li class="dropdown-submenu">
-                            <a class="test" tabindex="-1" href="#">Show Bookmarks<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Example Bookmark</a></li>
-                                <li><a tabindex="-1" href="#">Example Bookmark 2</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="test" href="#">Bookmark with subs <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Bookmark sub 1</a></li>
-                                        <li><a href="#">Bookmark sub 2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col btn">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">
-                        Help
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a tabindex="-1" href="#">About</a></li>
-                        <li><a tabindex="-1" href="#">Help</a></li>
-                        <li class="dropdown-submenu">
-                            <a class="test" tabindex="-1" href="#">Tips <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">Tip1</a></li>
-                                <li><a tabindex="-1" href="#">Tip2</a></li>
-                                <li class="dropdown-submenu">
-                                    <a class="test" href="#">More Tips <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Tip 3</a></li>
-                                        <li><a href="#">Tip 4</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            </nav>
         </div>
     </div>
 </header>
-
-<form class="bg-info w-100">
-    <div class="container">
-        <h2 class="row justify-content-center">Jersey RESTful Web Application!</h2>
-        <p class="row justify-content-start"><a href="webapi/myresource">Jersey resource</a>
-        </p><p class="row justify-content-end">Visit <a href="http://jersey.java.net">Project Jersey website</a>
-        for more information on Jersey!
-    </p></div>
-</form>
-
-<div class="w-100 bg-success">
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <p class="row justify-content-start"><a href="emission/index.html">Ember Application</a>
-        </div>
-    </div>
-</div>
-</div>
 
 <div class="container">
     <div class="row" style="margin : 10%;">
@@ -361,5 +236,31 @@
         </div>
     </div>
 </div>
+
+<div class="bg-info w-100">
+    <form class="container">
+        <div class="row">
+            <h2 class="col-12 text-center">Jersey RESTful Web Application!</h2>
+            <p class="col-12 text-left"><a href="webapi/myresource">Jersey resource</a>
+            </p>
+            <p class="col-12 text-right alert-link" style="margin-bottom: 0px;">Visit <a href="http://jersey.java.net">Project Jersey website</a>
+                for more information on Jersey!
+            </p>
+        </div>
+    </form>
+</div>
+
+<div class="w-100 bg-success">
+    <form class="container">
+        <div class="row">
+            <h2 class="col-12 text-center">Ember Web Application!</h2>
+            <p class="col-12 text-left"><a href="emission/index.html">Ember Application</a>
+            <p class="col-12 text-right alert-link" style="margin-bottom: 0px;">Visit <a href="https://guides.emberjs.com/v3.12.0/tutorial/ember-cli/">Emberjs v3.12 Guide</a>
+                for more information on Emberjs!
+            </p>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>
