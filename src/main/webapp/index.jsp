@@ -5,30 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Jersey Ember Bootstrap and DWR</title>
+
     <!-- JQuery -->
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/jquery-3.4.1.js"></script>
+
     <!-- Bootstrap Scripts -->
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/popper.js"></script>
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/bootstrap.js"></script>
-    <!-- DWR Scripts -->
+
+    <!-- Bootstrap DataTables -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+    <!-- DWR Script -->
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/engine.js"></script>
-    <!-- dwr created javascript from java -->
-    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/datahandler.js"></script>
+
+    <!-- DWR JavaDate -->
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/JavaDate.js"></script>
-    <!-- page specific behavior -->
+
+    <!-- Page JS -->
     <script type='text/javascript' src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/index.js"></script>
-    <!-- Css from Bootstrap - font-awesome - overrides in style -->
+
+    <!-- CSS from Bootstrap - Font-Awesome - Override in style.css -->
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/html5-boilerplate.css" />
+
+    <%-- NOTE: changed .btn border to none, wouldn't override--%>
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap-responsive.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+    <%-- Styles.css - cascade after bootstrap.css to override--%>
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/style.css" />
 </head>
 <body>
+
+<%--Bootstrap Navbar--%>
 <header>
     <div class="container">
             <nav class="navbar navbar-expand-sm navbar-light bg-light w-100">
@@ -67,6 +78,7 @@
     </div>
 </header>
 
+<%--Bootstrap DataTables--%>
 <div class="container">
     <div class="row" style="margin : 10%;">
         <div class="col-md-12 column sortable">
@@ -81,19 +93,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr class="row">
+                <tr class="row table-primary">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Default</td>
                 </tr>
-                <tr class="table-active row">
+                <tr class="row table-success">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Approved</td>
                 </tr>
-                <tr class="row table-success">
+                <tr class="row table-danger">
                     <td class="col">2</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">02/04/2012</td>
@@ -105,25 +117,25 @@
                     <td class="col">03/04/2012</td>
                     <td class="col">Pending</td>
                 </tr>
-                <tr class="row table-danger">
+                <tr class="row table-info">
                     <td class="col">4</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">04/04/2012</td>
                     <td class="col">Call in to confirm</td>
                 </tr>
-                <tr class="row">
+                <tr class="row table-primary">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Default</td>
                 </tr>
-                <tr class="table-active row">
+                <tr class="table-success row">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Approved</td>
                 </tr>
-                <tr class="row table-success">
+                <tr class="row table-danger">
                     <td class="col">2</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">02/04/2012</td>
@@ -135,25 +147,25 @@
                     <td class="col">03/04/2012</td>
                     <td class="col">Pending</td>
                 </tr>
-                <tr class="row table-danger">
+                <tr class="row table-info">
                     <td class="col">4</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">04/04/2012</td>
                     <td class="col">Call in to confirm</td>
                 </tr>
-                <tr class="row">
+                <tr class="row table-primary">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Default</td>
                 </tr>
-                <tr class="table-active row">
+                <tr class="table-success row">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Approved</td>
                 </tr>
-                <tr class="row table-success">
+                <tr class="row table-danger">
                     <td class="col">2</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">02/04/2012</td>
@@ -165,25 +177,25 @@
                     <td class="col">03/04/2012</td>
                     <td class="col">Pending</td>
                 </tr>
-                <tr class="row table-danger">
+                <tr class="row table-info">
                     <td class="col">4</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">04/04/2012</td>
                     <td class="col">Call in to confirm</td>
                 </tr>
-                <tr class="row">
+                <tr class="row table-primary">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Default</td>
                 </tr>
-                <tr class="table-active row">
+                <tr class="table-success row">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Approved</td>
                 </tr>
-                <tr class="row table-success">
+                <tr class="row table-danger">
                     <td class="col">2</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">02/04/2012</td>
@@ -195,25 +207,25 @@
                     <td class="col">03/04/2012</td>
                     <td class="col">Pending</td>
                 </tr>
-                <tr class="row table-danger">
+                <tr class="row table-info">
                     <td class="col">4</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">04/04/2012</td>
                     <td class="col">Call in to confirm</td>
                 </tr>
-                <tr class="row">
+                <tr class="row table-primary">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Default</td>
                 </tr>
-                <tr class="table-active row">
+                <tr class="table-success row">
                     <td class="col">1</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">01/04/2012</td>
                     <td class="col">Approved</td>
                 </tr>
-                <tr class="row table-success">
+                <tr class="row table-danger">
                     <td class="col">2</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">02/04/2012</td>
@@ -225,7 +237,7 @@
                     <td class="col">03/04/2012</td>
                     <td class="col">Pending</td>
                 </tr>
-                <tr class="row table-danger">
+                <tr class="row table-info">
                     <td class="col">4</td>
                     <td class="col">TB - Monthly</td>
                     <td class="col">04/04/2012</td>
@@ -237,6 +249,7 @@
     </div>
 </div>
 
+<%--Jersey--%>
 <div class="bg-info w-100">
     <form class="container">
         <div class="row">
@@ -250,6 +263,7 @@
     </form>
 </div>
 
+<%--Ember--%>
 <div class="w-100 bg-success">
     <form class="container">
         <div class="row">
