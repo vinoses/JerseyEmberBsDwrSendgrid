@@ -40,43 +40,44 @@
 <body>
 
 <%--Bootstrap Navbar--%>
-<header>
-    <div class="container">
-            <nav class="navbar navbar-expand-sm navbar-light bg-light w-100">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<div class="container-fullwidth m-0 p-0" style="border-bottom:1px solid black;">
 
-                <img src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png" class="img-fluid">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light w-100">
 
-                <div class="col ml-2 mr-5">
-                    DWR
-                    <div class="loadTime">
-                    </div>
-                </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link alert-link" href="emission/index.html">Ember </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link alert-link" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
+        <img src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png" class="img-fluid">
+
+        <div class="col ml-2 mr-5">
+            DWR
+            <div class="loadTime">
+            </div>
         </div>
-    </div>
-</header>
+
+        <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link alert-link" href="emission/index.html">Ember </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link alert-link" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+</div>
+
 
 <%--Bootstrap DataTables--%>
 <div class="container">
