@@ -23,7 +23,10 @@ public class EmailServlet extends HttpServlet {
         Email from = new Email("test@example.com");
         String subject = "Sendgrid Email, hidden image attached";
         Email to = new Email("vinoses@hotmail.com");
-        Content content = new Content("text/plain", "With Java everything is easy!");
+        Content content = new Content("text/html",
+                "<p>With Java everything is easy!</p>" +
+                        "<br/>" +
+                        "<a href='http://www.google.com'>Tracking Link</a>");
         Mail mail = new Mail(from, subject, to, content);
 
         SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
