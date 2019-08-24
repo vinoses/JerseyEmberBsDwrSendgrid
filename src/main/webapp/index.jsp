@@ -28,18 +28,18 @@
     <!-- CSS from Bootstrap - Font-Awesome - Override in style.css -->
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/html5-boilerplate.css" />
 
-    <%-- NOTE: changed .btn border to none, wouldn't override--%>
+    <!-- NOTE: changed .btn border to none, wouldn't override-->
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/bootstrap-responsive.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css"/>
 
-    <%-- Styles.css - cascade after bootstrap.css to override--%>
+    <!-- Styles.css - cascade after bootstrap.css to override-->
     <link rel="stylesheet" type="text/css" href="/JerseyEmberBsDwrSendgrid_war_exploded/resources/css/style.css" />
 </head>
 <body>
 
-<%--Bootstrap Navbar--%>
+<!--Bootstrap Navbar-->
 
 <div class="container-fullwidth m-0 p-0" style="border-bottom:1px solid black;">
 
@@ -49,7 +49,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <img src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png" class="img-fluid">
+        <img src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png" class="img-fluid" alt="4WN F4C3">
 
         <div class="col ml-2 mr-5">
             DWR
@@ -59,15 +59,75 @@
 
         <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a>
+
+                <li class="nav-item"><a class="text-primary nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a></li>
+
+                <li class="nav-item"><a class="text-primary nav-link alert-link" href="emission/index.html">Ember </a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dev</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item text-center nav-link alert-link" href="https://maven.apache.org/archetype/project-info.html">Maven <span class="sr-only"></span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://guides.github.com/introduction/git-handbook/">Git <span class="sr-only"></span></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Grunt</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link alert-link" href="emission/index.html">Ember </a>
+
+                <li class="nav-item dropdown">
+                    <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tools</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Intellij</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Bash</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">AQT</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link alert-link" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap</a>
+
+                <li class="nav-item dropdown">
+                    <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">APIs</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">DataTables</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://sendgrid.com/resources/">Sendgrid</a>
+                    </div>
                 </li>
+
+                <li class="nav-item dropdown">
+                    <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Programming</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Java</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Ember</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">HTML5</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">CSS3</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Sass</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Javascript</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Jquery</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Deployment</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Tomcat</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Wildfly</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item nav-link alert-link text-center" href="#">Hibernate</a>
+                    </div>
+                </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -79,7 +139,7 @@
 </div>
 
 
-<%--Bootstrap DataTables--%>
+<!--Bootstrap DataTables-->
 <div class="container">
     <div class="row" style="margin : 10%;">
         <div class="col-md-12 column sortable">
@@ -250,7 +310,7 @@
     </div>
 </div>
 
-<%--Jersey--%>
+<!--Jersey-->
 <div class="bg-info w-100">
     <form class="container">
         <div class="row">
@@ -264,7 +324,7 @@
     </form>
 </div>
 
-<%--Ember--%>
+<!--Ember-->
 <div class="w-100 bg-success">
     <form class="container">
         <div class="row">
