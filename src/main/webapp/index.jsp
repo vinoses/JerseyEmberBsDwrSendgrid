@@ -55,6 +55,9 @@
             DWR
             <div class="loadTime">
             </div>
+            <div class="d-flex badge badge-primary my-0"><p class="d-inline-flex my-0">Emails: </p>
+                <p id="counter" class="d-inline text-right mx-1 my-0">0</p>
+            </div>
         </div>
 
         <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
@@ -63,6 +66,10 @@
                 <li class="nav-item"><a class="text-primary nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a></li>
 
                 <li class="nav-item"><a class="text-primary nav-link alert-link" href="emission/index.html">Ember </a></li>
+
+                <li class="nav-item"><a class="text-primary nav-link alert-link" onclick="upDate(); return false;" href="#">DWR </a></li>
+
+                <li class="nav-item"><form id="emailServlet" class="bg-light border-0" method="post" style="border:none;"><input class="bg-light text-primary nav-link alert-link" onclick="callServlet(); return false;" type="submit" value="Sendgrid" style="border:none;"></form></li>
 
                 <li class="nav-item dropdown">
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dev</a>
