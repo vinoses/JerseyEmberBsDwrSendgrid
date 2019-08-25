@@ -19,8 +19,9 @@
     <!-- DWR Script -->
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/engine.js"></script>
 
-    <!-- DWR JavaDate -->
+    <!-- DWR Handlers -->
     <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/JavaDate.js"></script>
+    <script type="text/javascript" src="/JerseyEmberBsDwrSendgrid_war_exploded/dwr/interface/datahandler.js"></script>
 
     <!-- Page JS -->
     <script type='text/javascript' src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/scripts/index.js"></script>
@@ -55,7 +56,7 @@
             DWR
             <div class="loadTime">
             </div>
-            <div class="d-flex badge badge-primary my-0"><p class="d-inline-flex my-0">Emails: </p>
+            <div class="badge badge-pill badge-primary my-0"><p class="d-inline-flex my-0">Emails: </p>
                 <p id="counter" class="d-inline text-right mx-1 my-0">0</p>
             </div>
         </div>
@@ -63,13 +64,15 @@
         <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
+                <li class="nav-item"><a class="text-primary nav-link alert-link" href="./index.jsp">Home <span class="sr-only"></span></a></li>
+
                 <li class="nav-item"><a class="text-primary nav-link alert-link" href="webapi/myresource">Jersey <span class="sr-only"></span></a></li>
 
                 <li class="nav-item"><a class="text-primary nav-link alert-link" href="emission/index.html">Ember </a></li>
 
                 <li class="nav-item"><a class="text-primary nav-link alert-link" onclick="upDate(); return false;" href="#">DWR </a></li>
 
-                <li class="nav-item"><form id="emailServlet" class="bg-light border-0" method="post" style="border:none;"><input class="bg-light text-primary nav-link alert-link" onclick="callServlet(); return false;" type="submit" value="Sendgrid" style="border:none;"></form></li>
+                <li class="nav-item"><form id="emailServlet" class="bg-light border-0" method="post" style="border:none;"><input class="bg-light text-primary nav-link alert-link" type="submit" value="Sendgrid" style="border:none;"></form></li>
 
                 <li class="nav-item dropdown">
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dev</a>
@@ -78,25 +81,25 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item nav-link alert-link text-center" href="https://guides.github.com/introduction/git-handbook/">Git <span class="sr-only"></span></a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Grunt</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://gruntjs.com/getting-started">Grunt</a>
                     </div>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tools</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Intellij</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html">Intellij</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Bash</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="http://www.gnu.org/software/bash/manual/bash.html">Bash</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">AQT</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="http://www.querytool.com/help/">AQT</a>
                     </div>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">APIs</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">DataTables</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://datatables.net/examples/styling/bootstrap4">DataTables</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item nav-link alert-link text-center" href="https://sendgrid.com/resources/">Sendgrid</a>
                     </div>
@@ -106,32 +109,32 @@
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Programming</a>
 
                     <div class="dropdown-menu">
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Java</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://docs.oracle.com/javase/tutorial/java/javaOO/index.html">Java</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item nav-link alert-link text-center" href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootstrap</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Ember</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://guides.emberjs.com/release/">Ember</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">HTML5</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5">HTML5</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">CSS3</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://www.tutorialrepublic.com/css-reference/css3-properties.php">CSS3</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Sass</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://sass-lang.com/guide">Sass</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Javascript</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://frontendmasters.com/books/front-end-handbook/2019/">Javascript</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Jquery</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://github.com/nefe/You-Dont-Need-jQuery">Jquery</a>
                     </div>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Deployment</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Tomcat</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="http://tomcat.apache.org/tomcat-9.0-doc/">Tomcat</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Wildfly</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://wildscribe.github.io/WildFly/17.0/index.html">Wildfly</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item nav-link alert-link text-center" href="#">Hibernate</a>
+                        <a class="dropdown-item nav-link alert-link text-center" href="https://hibernate.org/orm/documentation/5.4/">Hibernate</a>
                     </div>
                 </li>
 
@@ -143,7 +146,7 @@
         </div>
     </nav>
 </div>
-</div>
+
 
 
 <!--Bootstrap DataTables-->
@@ -152,166 +155,7 @@
         <div class="col-md-12 column sortable">
             <h1 class="text-center">Bootstrap Datatables</h1>
             <table id='table' class="display table" data-page-length="3">
-                <thead>
-                <tr class="row"><span class="caret"></span>
-                    <th class="col">#</th>
-                    <th class="col">Product</th>
-                    <th class="col">Payment Taken</th>
-                    <th class="col">Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="row table-primary">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Default</td>
-                </tr>
-                <tr class="row table-success">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Approved</td>
-                </tr>
-                <tr class="row table-danger">
-                    <td class="col">2</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">02/04/2012</td>
-                    <td class="col">Declined</td>
-                </tr>
-                <tr class="row table-warning">
-                    <td class="col">3</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">03/04/2012</td>
-                    <td class="col">Pending</td>
-                </tr>
-                <tr class="row table-info">
-                    <td class="col">4</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">04/04/2012</td>
-                    <td class="col">Call in to confirm</td>
-                </tr>
-                <tr class="row table-primary">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Default</td>
-                </tr>
-                <tr class="table-success row">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Approved</td>
-                </tr>
-                <tr class="row table-danger">
-                    <td class="col">2</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">02/04/2012</td>
-                    <td class="col">Declined</td>
-                </tr>
-                <tr class="row table-warning">
-                    <td class="col">3</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">03/04/2012</td>
-                    <td class="col">Pending</td>
-                </tr>
-                <tr class="row table-info">
-                    <td class="col">4</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">04/04/2012</td>
-                    <td class="col">Call in to confirm</td>
-                </tr>
-                <tr class="row table-primary">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Default</td>
-                </tr>
-                <tr class="table-success row">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Approved</td>
-                </tr>
-                <tr class="row table-danger">
-                    <td class="col">2</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">02/04/2012</td>
-                    <td class="col">Declined</td>
-                </tr>
-                <tr class="row table-warning">
-                    <td class="col">3</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">03/04/2012</td>
-                    <td class="col">Pending</td>
-                </tr>
-                <tr class="row table-info">
-                    <td class="col">4</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">04/04/2012</td>
-                    <td class="col">Call in to confirm</td>
-                </tr>
-                <tr class="row table-primary">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Default</td>
-                </tr>
-                <tr class="table-success row">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Approved</td>
-                </tr>
-                <tr class="row table-danger">
-                    <td class="col">2</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">02/04/2012</td>
-                    <td class="col">Declined</td>
-                </tr>
-                <tr class="row table-warning">
-                    <td class="col">3</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">03/04/2012</td>
-                    <td class="col">Pending</td>
-                </tr>
-                <tr class="row table-info">
-                    <td class="col">4</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">04/04/2012</td>
-                    <td class="col">Call in to confirm</td>
-                </tr>
-                <tr class="row table-primary">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Default</td>
-                </tr>
-                <tr class="table-success row">
-                    <td class="col">1</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">01/04/2012</td>
-                    <td class="col">Approved</td>
-                </tr>
-                <tr class="row table-danger">
-                    <td class="col">2</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">02/04/2012</td>
-                    <td class="col">Declined</td>
-                </tr>
-                <tr class="row table-warning">
-                    <td class="col">3</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">03/04/2012</td>
-                    <td class="col">Pending</td>
-                </tr>
-                <tr class="row table-info">
-                    <td class="col">4</td>
-                    <td class="col">TB - Monthly</td>
-                    <td class="col">04/04/2012</td>
-                    <td class="col">Call in to confirm</td>
-                </tr>
-                </tbody>
+
             </table>
         </div>
     </div>

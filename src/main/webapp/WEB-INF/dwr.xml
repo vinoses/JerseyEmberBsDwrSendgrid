@@ -9,9 +9,9 @@
 		</create>
 
 <!--		&lt;!&ndash; Create People.js from People.java		&ndash;&gt;-->
-<!--		<create creator="new" javascript="datahandler" scope="script">-->
-<!--			<param name="class" value="com.github.vinoses.jerseyemberbsdwrsendgrid.DataHandler"/>-->
-<!--		</create>-->
+		<create creator="new" javascript="datahandler" scope="script">
+			<param name="class" value="com.github.vinoses.jerseyemberbsdwrsendgrid.DataHandler"/>
+		</create>
 <!--		&lt;!&ndash; Convert Person.java for entity return		&ndash;&gt;-->
 <!--		<convert match="com.github.vinoses.jerseyemberbsdwrsendgrid.Data" converter="bean"/>-->
 
