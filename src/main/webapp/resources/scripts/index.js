@@ -4,11 +4,11 @@ $(document).ready( function() {
 
 	function initialize() {
 
+		counter();
 		upDate();
 
 		datahandler.jsonPrettyString(function(data) {
 			let jsonObj = JSON.parse(data);
-			console.error(data);
 			$('#table').DataTable( {
 				data: jsonObj,
 				"columns": [
@@ -19,7 +19,6 @@ $(document).ready( function() {
 				"columnDefs": [ {
 					"targets": 3,
 				"createdCell": function (tr, cellData, rowData, row, col) {
-					console.error(cellData);
 					if ( cellData === 'Pending' ) {
 						$(tr).parent().addClass('table-warning');
 					} else if( cellData === 'Default'){
@@ -59,6 +58,9 @@ function upDate() {
 }
 
 function counter() {
-	let counter = $("#counter");
-	counter.text(parseInt(counter.text()) + 1);
+	emailhandler.getEmailCount(function(count){
+		let counter = $("#counter");
+		counter.text(parseInt(count));
+	});
+
 }

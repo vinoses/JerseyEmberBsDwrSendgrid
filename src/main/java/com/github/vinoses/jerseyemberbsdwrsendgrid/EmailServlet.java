@@ -37,6 +37,7 @@ public class EmailServlet extends HttpServlet {
             request.setBody(mail.build());
             Response response = sg.api(request);
             if(response.getStatusCode() == 202){
+                EmailCounter.getInstance().addEmail();
                 httpResponse.setStatus(202,"success");
             } else {
                 httpResponse.setStatus(500,"error");
