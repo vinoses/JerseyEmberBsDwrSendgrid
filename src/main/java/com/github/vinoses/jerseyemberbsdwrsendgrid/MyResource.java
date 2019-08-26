@@ -50,7 +50,7 @@ public class MyResource {
                     "            <span class=\"navbar-toggler-icon\"></span>\n" +
                     "        </button>\n" +
                     "\n" +
-                    "        <img src=\"/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png\" class=\"img-fluid\" alt=\"4WN F4C3\">\n" +
+                    "        <img src=\"/resources/images/vinoses.png\" class=\"img-fluid\" alt=\"4WN F4C3\">\n" +
                     "\n" +
                     "        <div class=\"col ml-2 mr-5\">\n" +
                     "            DWR\n" +

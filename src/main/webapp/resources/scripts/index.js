@@ -41,13 +41,25 @@ $(document).ready( function() {
 
 		event.preventDefault();
 		$.ajax({
-			url: '/JerseyEmberBsDwrSendgrid_war_exploded/emailservice',
+			url: '/emailservice',
 			type: 'post', success:function () {
 				counter();
 			}
 		});
 
 	}));
+
+    $("#emailStats").on("click", (function(event) {
+
+        event.preventDefault();
+        $.ajax({
+            url: '/stats',
+            type: 'post', success:function () {
+                // do something with stats
+            }
+        });
+
+    }));
 
 });
 

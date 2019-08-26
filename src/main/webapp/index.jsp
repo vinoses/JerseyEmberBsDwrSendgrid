@@ -14,7 +14,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <img src="/JerseyEmberBsDwrSendgrid_war_exploded/resources/images/vinoses.png" class="img-fluid" alt="4WN F4C3">
+        <img src="/resources/images/vinoses.png" class="img-fluid" alt="4WN F4C3">
 
         <div class="col ml-2 mr-5">
             DWR
@@ -37,6 +37,9 @@
                 <li class="nav-item"><a class="text-primary nav-link alert-link" onclick="upDate(); return false;" href="#">DWR </a></li>
 
                 <li class="nav-item"><form id="emailServlet" class="bg-light border-0" method="post" style="border:none;"><input class="bg-light text-primary nav-link alert-link" type="submit" value="Sendgrid" style="border:none;"></form></li>
+
+                <li class="nav-item"><form id="emailStats" class="bg-light border-0" method="post" style="border:none;"><input class="bg-light text-primary nav-link alert-link" type="submit" value="Stats" style="border:none;"></form></li>
+
 
                 <li class="nav-item dropdown">
                     <a class="text-info nav-link dropdown-toggle alert-heading alert-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dev</a>

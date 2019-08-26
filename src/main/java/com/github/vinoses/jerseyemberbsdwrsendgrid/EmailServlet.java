@@ -1,5 +1,7 @@
 package com.github.vinoses.jerseyemberbsdwrsendgrid;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.sendgrid.Method;
 import com.sendgrid.Request;
 import com.sendgrid.Response;
@@ -15,11 +17,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-
 @WebServlet(name = "EmailServlet", urlPatterns = {"/emailservice"})
 public class EmailServlet extends HttpServlet {
 
-    public void doPost(HttpServletRequest httpRequest, HttpServletResponse httpResponse) throws ServletException, IOException {
+    public void doPost(HttpServletRequest httpRequest, HttpServletResponse httpResponse)  {
         Email from = new Email("test@example.com");
         String subject = "Sendgrid Email, hidden image attached";
         Email to = new Email("vinoses@hotmail.com");
@@ -32,19 +33,24 @@ public class EmailServlet extends HttpServlet {
         SendGrid sg = new SendGrid(System.getenv("SENDGRID_API_KEY"));
         Request request = new Request();
         try {
+            System.out.println("EmailServlet processing email Sendgrid Post event");
             request.setMethod(Method.POST);
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
+
             Response response = sg.api(request);
-            if(response.getStatusCode() == 202){
-                EmailCounter.getInstance().addEmail();
-                httpResponse.setStatus(202,"success");
-            } else {
-                httpResponse.setStatus(500,"error");
-            }
-;
-        } catch (IOException ex) {
-            throw ex;
+            System.out.println("EmailServlet processed email through Sendgrid with response: " + response.getStatusCode());
+
+            System.out.println("EmailServlet email Sendgrid response callback: ");
+            Gson gson = new Gson();
+            Object json = gson.fromJson(httpRequest.getReader(), Object.class);
+            gson = new GsonBuilder().setPrettyPrinting().create();
+            String callbackPayload = gson.toJson(json);
+            System.out.println(callbackPayload);
+
+            EmailCounter.getInstance().addEmail();
+        } catch (Exception e) {
+            System.out.println("Exception in EmailServlet.doPost(), processing mail request to sendgrid: " + e);
         }
     }
 

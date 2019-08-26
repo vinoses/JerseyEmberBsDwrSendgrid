@@ -12,7 +12,6 @@ public class DataHandler {
     public DataHandler(){}
 
     private Object getTransactions(){
-//        final String file = "C:\\projects\\JerseyEmberBsDwrSendgrid\\src\\main\\webapp\\WEB-INF\\transactions.json";
         Gson gson = new Gson();
         try {
             Object object = gson.fromJson(new FileReader("C:\\projects\\JerseyEmberBsDwrSendgrid\\src\\main\\webapp\\WEB-INF\\transactions.json"), Object.class);
