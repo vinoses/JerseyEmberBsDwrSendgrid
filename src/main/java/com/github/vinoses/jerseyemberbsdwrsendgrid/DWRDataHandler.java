@@ -5,11 +5,11 @@ import com.google.gson.GsonBuilder;
 
 import java.io.*;
 
-public class DataHandler {
+public class DWRDataHandler {
 
     //private OutputStream output;
 
-    public DataHandler(){}
+    public DWRDataHandler(){}
 
     private Object getTransactions(){
         Gson gson = new Gson();

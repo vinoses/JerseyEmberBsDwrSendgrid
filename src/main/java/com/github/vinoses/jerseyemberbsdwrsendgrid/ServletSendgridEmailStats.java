@@ -1,11 +1,6 @@
 package com.github.vinoses.jerseyemberbsdwrsendgrid;
 
-import com.sendgrid.Method;
-import com.sendgrid.Request;
-import com.sendgrid.Response;
-import com.sendgrid.SendGrid;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.concurrent.FutureCallback;
@@ -17,27 +12,22 @@ import org.apache.http.nio.client.methods.HttpAsyncMethods;
 import org.apache.http.nio.protocol.HttpAsyncRequestProducer;
 import org.apache.http.protocol.HttpContext;
 
-import javax.servlet.AsyncContext;
-import javax.servlet.AsyncEvent;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.websocket.RemoteEndpoint;
 import javax.ws.rs.POST;
 import javax.ws.rs.Produces;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.nio.CharBuffer;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.*;
 
+//not working, unable to capture async response, possible bad url for api
+
 @WebServlet(name = "EmailStatsServlet", urlPatterns="/stats")
-public class EmailStatsServlet extends HttpServlet {
+public class ServletSendgridEmailStats extends HttpServlet {
 
     @Override
     @POST

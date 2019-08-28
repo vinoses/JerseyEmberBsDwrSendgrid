@@ -5,14 +5,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.io.BufferedReader;
-import java.io.File;
+
 import java.io.FileReader;
 
 /**
  * Root resource (exposed at "myresource" path)
  */
 @Path("myresource")
-public class MyResource {
+public class SampleMyResource {
+
 
     private String getLines(BufferedReader br){
         String line = null;
@@ -23,7 +24,7 @@ public class MyResource {
             }
             return lines;
         } catch(Exception e){
-            System.out.println("Exeption in MyResource parsing header lines");
+            System.out.println("Exeption in SampleMyResource parsing header lines");
         }
         return "";    }
 

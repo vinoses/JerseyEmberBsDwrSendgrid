@@ -16,14 +16,35 @@
 
         <img src="/resources/images/vinoses.png" class="img-fluid" alt="4WN F4C3">
 
-        <div class="col ml-2 mr-5">
+        <div class="col ml-2 mr-5 h6">
             DWR
-            <div class="loadTime">
-            </div>
-            <div class="badge badge-pill badge-primary my-0"><p class="d-inline-flex my-0">Emails: </p>
-                <p id="counter" class="d-inline text-right mx-1 my-0" value="counter()"></p>
+            <div class="loadTime" style="font-size:10px;">
             </div>
         </div>
+        <div class="d-block">
+            <div class="h6 text-center"> Sendgrid Email Stats</div>
+            <div class="small d-block text-center">
+                <div class="badge badge-pill badge-info my-0"><p class="d-inline-flex my-0">Sent: </p>
+                    <p id="counterSent" class="d-inline text-right mx-1 my-0" value="counterSent()"></p>
+                </div>
+                <div class="badge badge-pill badge-info my-0"><p class="d-inline-flex my-0">Processed: </p>
+                    <p id="counterProcessed" class="d-inline text-right mx-1 my-0" value="counterProcessed()"></p>
+                </div>
+            </div>
+            <div class="small d-inline-flex text-center">
+                <div class="badge badge-pill badge-primary my-0"><p class="d-inline-flex my-0">Opened: </p>
+                    <p id="counterOpened" class="d-inline text-right mx-1 my-0" value="counterOpened()"></p>
+                </div>
+                <div class="badge badge-pill badge-success my-0 mx-1"><p class="d-inline-flex my-0">Clicked: </p>
+                    <p id="counterClicked" class="d-inline text-right mx-1 my-0" value="counterClicked()"></p>
+                </div>
+                <div class="badge badge-pill badge-danger my-0"><p class="d-inline-flex my-0">Failed: </p>
+                    <p id="counterFailed" class="d-inline text-right mx-1 my-0" value="counterFailed()"></p>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="collapse navbar-collapse offset-1" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">

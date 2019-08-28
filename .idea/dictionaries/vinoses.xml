@@ -2,6 +2,7 @@
   <dictionary name="vinoses">
     <words>
       <w>sendgrid</w>
+      <w>websockets</w>
     </words>
   </dictionary>
 </component>
